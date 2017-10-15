@@ -18,9 +18,6 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
-body {
-  line-height: 1; }
-
 ol, ul {
   list-style: none; }
 
@@ -46,13 +43,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 body {
+  line-height: 1.5;
   font-family: sans-serif;
-  color: #2a2a2a; }
+  color: #2a2a2a;
+   }
 
 a {
-  color: #0388a6; }
+  color: #000000; }
   a:hover {
-    color: #009ce0; }
+    color: #269bbe; }
 
 #main {
   padding: 50px; }
