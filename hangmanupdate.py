@@ -34,6 +34,7 @@ def setParts():
         4 : rightArm,
         5 : leftLeg,
         6 : rightLeg,
+        7 : placeholder,
         }
     return parts
 
@@ -73,6 +74,9 @@ def rightLeg(art):
     art[12] = '       +    +      |';
     art[13] = '      +      +     |';
 
+def placeholder(art):
+    art.insert(13, '');
+    
 def init():
     bodyParts = setParts()
     art = makeArt()
@@ -138,8 +142,14 @@ for i in range(len(word)):
 youWon = "1" * len(word)
 youWon = list(youWon)
 
-while word != youWon:
+while word != youWon and count != 6:
     guess = input("Letter? ")
+    
+    if guess not in word:
+        count = count + 1
+        misses = count
+        bodyParts[misses](art)
+        
     for i in range(len(word)):
     
         if guess == word[i]:
@@ -147,12 +157,11 @@ while word != youWon:
             spaces = insertLetter(spaces, guess, pos)
             word[i] = "1"
             print(word)
-        else:
-            count = count + 1
-            misses = count
-            bodyParts[misses](art)
+            
+    print(count)
     if youWon == word:
         print("You win!")
-        
+    printArt(art)
     print(spaces)
-    
+    if count == 6:
+        print("You lose! :(")
