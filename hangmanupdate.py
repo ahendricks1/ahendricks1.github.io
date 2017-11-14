@@ -83,42 +83,6 @@ def init():
     word = readWords()
     return bodyParts, art, word
 
-'''
-def f(x): #assumes x is list
-    for line in x:
-        print(line)
-'''
-'''
-def main():
-    bodyParts, art, words = init()
-    
-    printArt(art)
-    
-
-    misses = 1
-    bodyParts[misses](art)
-    
-    misses = 2
-    bodyParts[misses](art)
-
-    misses = 3
-    bodyParts[misses](art)
-
-    misses = 4
-    bodyParts[misses](art)
-    
-    misses = 5
-    bodyParts[misses](art)
-
-    misses = 6
-    bodyParts[misses](art)
-
- 
-    printArt(art);
-
-main()
-'''
-
 count = 0
 
 bodyParts, art, words = init()
